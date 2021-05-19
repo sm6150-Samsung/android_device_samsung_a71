@@ -1,0 +1,10 @@
+[
+    {
+        "repository": "android_kernel_samsung_a71",
+        "target_path": "device/kernel/a71"
+    },
+    {
+        "repository": "android_device_samsung_sm6150-common",
+        "target_path": "device/samsung/sm6150-common"
+    }
+]
