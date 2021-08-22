@@ -13,10 +13,10 @@ $(call inherit-product, device/samsung/a71/device.mk)
 $(call inherit-product-if-exists, vendor/gapps/config.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/dot/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_a71
+PRODUCT_NAME := dot_a71
 PRODUCT_DEVICE := a71
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A715F
