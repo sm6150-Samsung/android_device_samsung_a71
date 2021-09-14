@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from a71 device
 $(call inherit-product, device/samsung/a71/device.mk)
-$(call inherit-product-if-exists, vendor/gapps/config.mk)
+$(call inherit-product-if-exists, vendor/gms/common/common-vendor.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/dot/config/common.mk)
