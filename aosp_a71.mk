@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/a71/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_a71
+PRODUCT_NAME := aosp_a71
 PRODUCT_DEVICE := a71
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A715F
@@ -36,4 +36,18 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=a71naxx \
     PRIVATE_BUILD_DESC="a71naxx-user 11 RP1A.200720.012 A715FXXU3BUB5 release-keys"
 
-BUILD_FINGERPRINT := "samsung/a71naxx/a71:11/RP1A.200720.012/A715FXXU3BUB5:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys" 
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys
+
+ALLOW_MISSING_DEPENDENCIES=true
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+# GApps
+TARGET_GAPPS_ARCH := arm64
+
+TARGET_INCLUDE_CUSTOM_FONTS := false
