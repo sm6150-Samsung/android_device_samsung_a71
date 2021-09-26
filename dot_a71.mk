@@ -10,13 +10,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from a71 device
 $(call inherit-product, device/samsung/a71/device.mk)
-$(call inherit-product-if-exists, vendor/gms/common/common-vendor.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := dot_a71
+PRODUCT_NAME := aosp_a71
 PRODUCT_DEVICE := a71
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A715F
@@ -50,3 +49,5 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # GApps
 TARGET_GAPPS_ARCH := arm64
+
+TARGET_INCLUDE_CUSTOM_FONTS := false
