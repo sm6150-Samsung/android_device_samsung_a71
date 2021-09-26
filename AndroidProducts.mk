@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_a71.mk
+    $(LOCAL_DIR)/aosp_a71.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_a71-eng \
-    dot_a71-userdebug \
-    dot_a71-user
+    aosp_a71-eng \
+    aosp_a71-userdebug \
+    aosp_a71-user
